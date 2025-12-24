@@ -793,22 +793,22 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#home">Beranda</a></li>
-                    <li class="nav-item"><a class="nav-link" href="detail/about.html">Tentang kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Tentang kami</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Layanan
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="detail/detail1.html">Web Development</a></li>
-                            <li><a class="dropdown-item" href="detail/cloudsolutions.html">Cloud Solutions</a></li>
-                            <li><a class="dropdown-item" href="detail/itsecurity.html">IT Security</a></li>
+                            <li><a class="dropdown-item" href="detail1.html">Web Development</a></li>
+                            <li><a class="dropdown-item" href="cloudsolutions.html">Cloud Solutions</a></li>
+                            <li><a class="dropdown-item" href="itsecurity.html">IT Security</a></li>
                         </ul>
                     </li>
 
-                    <li class="nav-item"><a class="nav-link" href="detail/karir.html">Karir</a></li>
-                    <li class="nav-item"><a class="nav-link" href="detail/portofolio.html">Portofolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="detail/kontak.html">Kontak</a></li>
+                    <li class="nav-item"><a class="nav-link" href="karir.html">Karir</a></li>
+                    <li class="nav-item"><a class="nav-link" href="portofolio.html">Portofolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
                 </ul>
             </div>
         </div>
@@ -952,10 +952,12 @@
     <!-- Category Tabs -->
     <div class="container">
         <div class="category-tabs">
-            <button class="tab active" onclick="filterClients('government')">Pemerintahan</button>
-            <button class="tab" onclick="filterClients('health')">Fasilitas Kesehatan</button>
-            <button class="tab" onclick="filterClients('education')">Pendidikan</button>
-            <button class="tab" onclick="filterClients('private')">Swasta</button>
+            <button class="tab active" onclick="filterClients('all', event)">Semua</button>
+            <button class="tab" onclick="filterClients('government', event)">Instansi</button>
+            <button class="tab" onclick="filterClients('health', event)">Kesehatan</button>
+            <button class="tab" onclick="filterClients('education', event)">Pendidikan</button>
+            <button class="tab" onclick="filterClients('private', event)">Swasta</button>
+
         </div>
     </div>
 
@@ -968,7 +970,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 client-item" data-category="government">
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="../assets/img/demak.png" alt="Dinas PU Kab. Demak" />
+                            <img src="assets/img/demak.png" alt="Dinas PU Kab. Demak" />
                         </div>
                         <h5 class="client-name">Dinas PU Kab. Demak</h5>
                     </div>
@@ -977,7 +979,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 client-item" data-category="government">
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="../assets/img/nunukan.png" alt="Dinas Pendidikan Kab. Nunukan" />
+                            <img src="assets/img/nunukan.png" alt="Dinas Pendidikan Kab. Nunukan" />
                         </div>
                         <h5 class="client-name">Dinas Pendidikan Kab. Nunukan</h5>
                     </div>
@@ -986,7 +988,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 client-item" data-category="government">
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="../assets/img/tanatidung.png" alt="Inspektorat Kab. Tana Tidung" />
+                            <img src="assets/img/tanatidung.png" alt="Inspektorat Kab. Tana Tidung" />
                         </div>
                         <h5 class="client-name">Inspektorat Kab. Tana Tidung</h5>
                     </div>
@@ -995,7 +997,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 client-item" data-category="government">
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="../assets/img/kbdemak.png" alt="BPKAD Kab Demak" />
+                            <img src="assets/img/kbdemak.png" alt="BPKAD Kab Demak" />
                         </div>
                         <h5 class="client-name">BPKAD Kab Demak</h5>
                     </div>
@@ -1004,7 +1006,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 client-item" data-category="government">
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="../assets/img/bulungan.png" alt="Dinas PU Kab. Bulungan" />
+                            <img src="assets/img/bulungan.png" alt="Dinas PU Kab. Bulungan" />
                         </div>
                         <h5 class="client-name">Dinas PU Kab. Bulungan</h5>
                     </div>
@@ -1013,7 +1015,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 client-item" data-category="government">
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="../assets/img/kbdemak.png" alt="DINPERKIM Kab Demak" />
+                            <img src="assets/img/kbdemak.png" alt="DINPERKIM Kab Demak" />
                         </div>
                         <h5 class="client-name">DINPERKIM Kab Demak</h5>
                     </div>
@@ -1022,7 +1024,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 client-item" data-category="government">
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="../assets/img/probo.png" alt="BPKAD Kota Probolinggo" />
+                            <img src="assets/img/probo.png" alt="BPKAD Kota Probolinggo" />
                         </div>
                         <h5 class="client-name">BPKAD Kota Probolinggo</h5>
                     </div>
@@ -1031,7 +1033,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 client-item" data-category="government">
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="../assets/img/kee.png" alt="BPKAD Kab. Keerom" />
+                            <img src="assets/img/kee.png" alt="BPKAD Kab. Keerom" />
                         </div>
                         <h5 class="client-name">BPKAD Kab. Keerom</h5>
                     </div>
@@ -1040,7 +1042,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 client-item" data-category="government">
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="../assets/img/kotp.png" alt="BPKAD Kab. Probolinggo" />
+                            <img src="assets/img/kotp.png" alt="BPKAD Kab. Probolinggo" />
                         </div>
                         <h5 class="client-name">BPKAD Kab. Probolinggo</h5>
                     </div>
@@ -1049,7 +1051,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 client-item" data-category="government">
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="../assets/img/biak.png" alt="BPKAD Kab. Biak Numfor" />
+                            <img src="assets/img/biak.png" alt="BPKAD Kab. Biak Numfor" />
                         </div>
                         <h5 class="client-name">BPKAD Kab. Biak Numfor</h5>
                     </div>
@@ -1058,7 +1060,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 client-item" data-category="government">
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="../assets/img/bulungan.png" alt="BPKAD Kab. Bulungan" />
+                            <img src="assets/img/bulungan.png" alt="BPKAD Kab. Bulungan" />
                         </div>
                         <h5 class="client-name">BPKAD Kab. Bulungan</h5>
                     </div>
@@ -1067,7 +1069,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 client-item" data-category="government">
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="../assets/img/papua.png" alt="BPKAD Kab. Puncak Jaya" />
+                            <img src="assets/img/papua.png" alt="BPKAD Kab. Puncak Jaya" />
                         </div>
                         <h5 class="client-name">BPKAD Kab. Puncak Jaya</h5>
                     </div>
@@ -1076,7 +1078,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 client-item" data-category="government">
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="../assets/img/situ.png" alt="Dinas Kesehatan Kab. Situbondo" />
+                            <img src="assets/img/situ.png" alt="Dinas Kesehatan Kab. Situbondo" />
                         </div>
                         <h5 class="client-name">Dinas Kesehatan Kab. Situbondo</h5>
                     </div>
@@ -1085,7 +1087,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 client-item" data-category="government">
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="../assets/img/skleri.png" alt="BPKAD Kota Kupang" />
+                            <img src="assets/img/skleri.png" alt="BPKAD Kota Kupang" />
                         </div>
                         <h5 class="client-name">BPKAD Kota Kupang</h5>
                     </div>
@@ -1094,7 +1096,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 client-item" data-category="government">
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="../assets/img/arsip.png" alt="Dinas Arsip Kota Semarang" />
+                            <img src="assets/img/arsip.png" alt="Dinas Arsip Kota Semarang" />
                         </div>
                         <h5 class="client-name">Dinas Arsip Kota Semarang</h5>
                     </div>
@@ -1104,7 +1106,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 client-item" data-category="health">
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="../assets/img/rsp.png" alt="RSI Nashrul Ummah Lamongan" />
+                            <img src="assets/img/rsp.png" alt="RSI Nashrul Ummah Lamongan" />
                         </div>
                         <h5 class="client-name">RSI Nashrul Ummah Lamongan</h5>
                     </div>
@@ -1113,7 +1115,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 client-item" data-category="health">
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="../assets/img/rsudkwaingga.png" alt="RSUD Kwaingga" />
+                            <img src="assets/img/rsudkwaingga.png" alt="RSUD Kwaingga" />
                         </div>
                         <h5 class="client-name">RSUD Kwaingga</h5>
                     </div>
@@ -1122,7 +1124,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 client-item" data-category="health">
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="../assets/img/bop.png" alt="RS Permata Hati Lamongan" />
+                            <img src="assets/img/bop.png" alt="RS Permata Hati Lamongan" />
                         </div>
                         <h5 class="client-name">RS Permata Hati Lamongan</h5>
                     </div>
@@ -1131,7 +1133,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 client-item" data-category="health">
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="../assets/img/tarakan.png" alt="RSUD Tarakan" />
+                            <img src="assets/img/tarakan.png" alt="RSUD Tarakan" />
                         </div>
                         <h5 class="client-name">RSUD Tarakan</h5>
                     </div>
@@ -1140,7 +1142,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 client-item" data-category="health">
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="../assets/img/skleri.png" alt="RSUD SK. Lerik Kota Kupang" />
+                            <img src="assets/img/skleri.png" alt="RSUD SK. Lerik Kota Kupang" />
                         </div>
                         <h5 class="client-name">RSUD SK. Lerik Kota Kupang</h5>
                     </div>
@@ -1149,7 +1151,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 client-item" data-category="health">
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="../assets/img/subulus.png" alt="RSUD Subulussalam Aceh" />
+                            <img src="assets/img/subulus.png" alt="RSUD Subulussalam Aceh" />
                         </div>
                         <h5 class="client-name">RSUD Subulussalam Aceh</h5>
                     </div>
@@ -1158,7 +1160,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 client-item" data-category="health">
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="../assets/img/ben.png" alt="RSUD Bendan Pekalongan" />
+                            <img src="assets/img/ben.png" alt="RSUD Bendan Pekalongan" />
                         </div>
                         <h5 class="client-name">RSUD Bendan Pekalongan</h5>
                     </div>
@@ -1167,7 +1169,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 client-item" data-category="health">
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="../assets/img/waluyo.png" alt="RSUD Setjonegoro Wonosobo" />
+                            <img src="assets/img/waluyo.png" alt="RSUD Setjonegoro Wonosobo" />
                         </div>
                         <h5 class="client-name">RSUD Setjonegoro Wonosobo</h5>
                     </div>
@@ -1176,7 +1178,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 client-item" data-category="health">
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="../assets/img/saleh.png" alt="RSUD Dr. Moh Saleh Probolinggo" />
+                            <img src="assets/img/saleh.png" alt="RSUD Dr. Moh Saleh Probolinggo" />
                         </div>
                         <h5 class="client-name">RSUD Dr. Moh Saleh Probolinggo</h5>
                     </div>
@@ -1185,7 +1187,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 client-item" data-category="health">
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="../assets/img/jati.png" alt="RSUD Waluyo Probolinggo" />
+                            <img src="assets/img/jati.png" alt="RSUD Waluyo Probolinggo" />
                         </div>
                         <h5 class="client-name">RSUD Waluyo Probolinggo</h5>
                     </div>
@@ -1194,7 +1196,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 client-item" data-category="health">
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="../assets/img/rsud-nunukan.png" alt="RSUD Kabupaten Nunukan" />
+                            <img src="assets/img/rsud-nunukan.png" alt="RSUD Kabupaten Nunukan" />
                         </div>
                         <h5 class="client-name">RSUD Kabupaten Nunukan</h5>
                     </div>
@@ -1203,7 +1205,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 client-item" data-category="health">
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="../assets/img/mitra.png" alt="Klinik Mitra Bahagia Pekalongan" />
+                            <img src="assets/img/mitra.png" alt="Klinik Mitra Bahagia Pekalongan" />
                         </div>
                         <h5 class="client-name">Klinik Mitra Bahagia Pekalongan</h5>
                     </div>
@@ -1212,7 +1214,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 client-item" data-category="health">
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="../assets/img/klinik_adikarsa.png" alt="Klinik Adikarsa" />
+                            <img src="assets/img/klinik_adikarsa.png" alt="Klinik Adikarsa" />
                         </div>
                         <h5 class="client-name">Klinik Adikarsa</h5>
                     </div>
@@ -1221,7 +1223,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 client-item" data-category="health">
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="../assets/img/logo_sakasasmitra.png" alt="Klinik Saka Sasmitra" />
+                            <img src="assets/img/logo_sakasasmitra.png" alt="Klinik Saka Sasmitra" />
                         </div>
                         <h5 class="client-name">Klinik Saka Sasmitra</h5>
                     </div>
@@ -1230,7 +1232,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 client-item" data-category="health">
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="../assets/img/klinikbunmed.png" alt="Klinik Bunda Medika" />
+                            <img src="assets/img/klinikbunmed.png" alt="Klinik Bunda Medika" />
                         </div>
                         <h5 class="client-name">Klinik Bunda Medika</h5>
                     </div>
@@ -1240,7 +1242,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 client-item" data-category="education">
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="../assets/img/papuak.png" alt="Sekolah Papua Kasih" />
+                            <img src="assets/img/papuak.png" alt="Sekolah Papua Kasih" />
                         </div>
                         <h5 class="client-name">Sekolah Papua Kasih</h5>
                     </div>
@@ -1249,7 +1251,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 client-item" data-category="education">
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="../assets/img/man1sumbawa.png" alt="MAN 1 Sumbawa" />
+                            <img src="assets/img/man1sumbawa.png" alt="MAN 1 Sumbawa" />
                         </div>
                         <h5 class="client-name">MAN 1 Sumbawa</h5>
                     </div>
@@ -1259,7 +1261,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 client-item" data-category="private">
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="../assets/img/colomadu.png" alt="PT. Sinergi Colomadu" />
+                            <img src="assets/img/colomadu.png" alt="PT. Sinergi Colomadu" />
                         </div>
                         <h5 class="client-name">PT. Sinergi Colomadu</h5>
                     </div>
@@ -1268,7 +1270,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 client-item" data-category="private">
                     <div class="client-card">
                         <div class="client-logo">
-                            <img src="../assets/img/koperasi.png" alt="KSP Mitra Lestari" />
+                            <img src="assets/img/koperasi.png" alt="KSP Mitra Lestari" />
                         </div>
                         <h5 class="client-name">KSP Mitra Lestari</h5>
                     </div>
@@ -1525,9 +1527,9 @@
                         <h5 class="footer-title">Menu</h5>
                         <ul class="footer-links">
                             <li><a href="#home">Beranda</a></li>
-                            <li><a href="detail/about.html">Tentang Kami</a></li>
+                            <li><a href="about.html">Tentang Kami</a></li>
                             <li><a href="#services">Layanan</a></li>
-                            <li><a href="detail/portofolio.html">Portfolio</a></li>
+                            <li><a href="portofolio.html">Portfolio</a></li>
 
                         </ul>
                     </div>
@@ -1537,9 +1539,9 @@
                     <div class="footer-section">
                         <h5 class="footer-title">Layanan Kami</h5>
                         <ul class="footer-links">
-                            <li><a href="detail/detail1.html">Web Development</a></li>
-                            <li><a href="detail/cloudsolutions.html">Cloud Solutions</a></li>
-                            <li><a href="detail/itsecurity.html">IT Security</a></li>
+                            <li><a href="detail1.html">Web Development</a></li>
+                            <li><a href="cloudsolutions.html">Cloud Solutions</a></li>
+                            <li><a href="itsecurity.html">IT Security</a></li>
                         </ul>
                     </div>
                 </div>
@@ -1691,17 +1693,20 @@
 
 
     <script>
-        function filterClients(category) {
-            filterClients('government');
+        function filterClients(category, event) {
 
             const tabs = document.querySelectorAll(".tab");
             const items = document.querySelectorAll(".client-item");
 
+            // Hapus active pada semua tab
             tabs.forEach((tab) => tab.classList.remove("active"));
+
+            // Tambahkan active pada tombol yang ditekan
             event.target.classList.add("active");
 
+            // Filter item
             items.forEach((item) => {
-                if (category === "government" || item.dataset.category === category) {
+                if (category === "all" || item.dataset.category === category) {
                     item.style.display = "block";
                 } else {
                     item.style.display = "none";
@@ -1709,6 +1714,7 @@
             });
         }
     </script>
+
 </body>
 
 </html>

@@ -32,18 +32,53 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
+ /* Navbar */
+        .navbar {
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.98) !important;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            animation: slideInDown 0.6s ease;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-brand:hover {
+            transform: scale(1.05);
+        }
+
         .navbar-brand-logo {
-            height: 38px;
+            height: 40px;
+            transition: transform 0.3s ease;
         }
 
         .nav-link {
+            position: relative;
             font-weight: 500;
-            color: #1f2937 !important;
+            padding: 8px 16px !important;
+            transition: all 0.3s ease;
         }
 
-        .nav-link:hover {
-            color: var(--primary) !important;
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: var(--primary-gradient);
+            transition: width 0.3s ease;
         }
+
+        .nav-link:hover::after {
+            width: 70%;
+        }
+
 
         /* ================= TITLE ================= */
         .page-title {
@@ -197,26 +232,40 @@
 
 <body>
     <!-- ================= NAVBAR ================= -->
-    <nav class="navbar navbar-expand-lg sticky-top custom-navbar">
+   <!-- Header/Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <div class="container">
-            <a class="navbar-brand d-flex gap-2 align-items-center" href="#">
-                <img src="../assets/img/46.png" class="navbar-brand-logo" />
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/46.png" alt="Optima Multi Sinergi" class="navbar-brand-logo" />
+
             </a>
-            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="nav">
-                <ul class="navbar-nav ms-auto gap-3 align-items-center">
-                    <li><a class="nav-link" href="../index.html#home">Beranda</a></li>
-                    <li><a class="nav-link" href="about.html">Tentang</a></li>
-
-                    <li>
-                        <a class="btn btn-primary rounded-pill px-4" href="kontak.html">Kontak</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Tentang kami</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Layanan
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="detail1.html">Web Development</a></li>
+                            <li><a class="dropdown-item" href="cloudsolutions.html">Cloud Solutions</a></li>
+                            <li><a class="dropdown-item" href="itsecurity.html">IT Security</a></li>
+                        </ul>
                     </li>
+
+                    <li class="nav-item"><a class="nav-link" href="karir.html">Karir</a></li>
+                    <li class="nav-item"><a class="nav-link" href="portofolio.html">Portofolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+
 
     <!-- ================= CONTENT ================= -->
     <div class="container py-5">
