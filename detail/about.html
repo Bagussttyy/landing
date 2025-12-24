@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - Optima Multi Sinergi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Header/Navbar */
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #e91e63, #9c27b0);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .logo-text {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover::after {
+            width: 70%;
+        }
+
+
+        /* Page Header */
+        .client-image {
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .client-image img {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+
+        /* About Section */
+        .about-intro {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 40px;
+        }
+
+        .about-intro h2 {
+            font-size: 36px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .about-intro .subtitle {
+            text-align: center;
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-top: 60px;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .about-text {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #e91e63, #9c27b0);
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: transform 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(233, 30, 99, 0.3);
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: #f5f5f5;
+            padding: 60px 40px;
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-item {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: bold;
+            color: #e91e63;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 18px;
+            color: #666;
+        }
+
+        /* Client Oriented Section */
+        .client-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 40px;
+        }
+
+        .client-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .client-image {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .client-text h2 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .client-text p {
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .client-text ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .client-text ul li {
+            color: #555;
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .client-text ul li:before {
+            content: "•";
+            color: #e91e63;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 20px;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        /* Vision Mission Section */
+        .vision-mission {
+            background: #f5f5f5;
+            padding: 80px 40px;
+        }
+
+        .vision-mission-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .vm-box {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .vm-box h2 {
+            font-size: 32px;
+            color: #e91e63;
+            margin-bottom: 20px;
+        }
+
+        .vm-box p,
+        .vm-box ul {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .vm-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .vm-box ul li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .vm-box ul li:before {
+            content: "✓";
+            color: #e91e63;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 18px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(to right, #d4af37, #1e3a8a);
+            color: white;
+            padding: 20px 40px;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .copyright-icon {
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1e3a8a;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .footer-left p {
+            color: white;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .footer-right {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .footer-right a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            white-space: nowrap;
+            transition: opacity 0.3s;
+        }
+
+        .footer-right a:hover {
+            opacity: 0.8;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #333;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                flex-direction: column;
+                background: white;
+                width: 100%;
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                transition: left 0.3s;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .page-header h1 {
+                font-size: 32px;
+            }
+
+            .about-content,
+            .client-content,
+            .vision-mission-container {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-container {
+                grid-template-columns: 1fr;
+            }
+
+            footer {
+                padding: 20px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-right {
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header/Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="../assets/img/46.png" alt="Optima Multi Sinergi" class="navbar-brand-logo" />
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../detail/about.html" class="active">Tentang Kami</a></li>
+                <li><a href="../detail/portofolio.html">Portofolio</a></li>
+                <li><a href="../detail/karir.html">Karir</a></li>
+                <li><a href="../detail/kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <!-- About Intro Section -->
+    <section class="about-intro">
+        <h2>Tentang Kami</h2>
+        <p class="subtitle">Kami bukan hanya membuat aplikasi tetapi juga<br>membangun hubungan yang erat dengan
+            klien-klien kami.</p>
+
+        <div class="about-content">
+
+            <div class="about-image">
+                <img src="../assets/img/about1.jpg" alt="Company Image">
+            </div>
+
+            <div class="about-text">
+                <p>Optima Multi Sinergi berdiri pada tahun 2020, yang telah bertransformasi dari Komanditer menjadi
+                    Perseroan. Kami adalah perusahaaan yang bergerak di bidang teknologi informasi yang fokus pada
+                    pengembangan sistem informasi, implementasi dan maintenance aplikasi serta pengadaan barang
+                    (hardware), dan software perangkat komputer lainnya. Kami hadir sebagai pelengkap akan kebutuhan
+                    solusi IT ditengah kompetisi yang sangat tinggi.
+
+                    Motto kami “Your Smart Solution Technology“ merupakan potret penyedia jasa solusi teknologi
+                    informasi yang cerdas akan kebutuhan klien kami dalam pengembangan Sistem informasi / komputerisasi,
+                    implementasi dan pelatihan-pelatihan di bidang tehnologi informasi. Optima Multi Sinergi memiliki
+                    spesialisasi di bidang Teknologi Informasi, Internet, dan Telekomunikasi, sehingga memiliki
+                    pemahaman yang komprehensif dan aktual mengenai pemanfaatan IT bagi para klien kami. Dan juga di
+                    dukung oleh tim yang memiliki kompetensi di bidang pendukung lainnya guna terwujud suatu sinergi
+                    dalam pengembangan dan implementasi sistem informasi kepada klien kami.</p>
+                <a href="kontak.html" class="cta-button">HUBUNGI KAMI</a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number">10+</div>
+                <div class="stat-label">Specialists</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">10+</div>
+                <div class="stat-label">Clients</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">20+</div>
+                <div class="stat-label">Products</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Oriented Section -->
+    <section class="client-section">
+        <div class="client-content">
+
+            <div class="client-text">
+                <h2>Berorientasi kepada Klien</h2>
+                <p>Dalam membangun aplikasi, kami selalu mendengar masukan-masukan dari client kami, sehingga didalam
+                    proses implementasi aplikasi bisa berjalan dengan baik. Kami juga mempunyai Tim Implementasi yang
+                    berpengalaman dan help desk yang membantu tim implementasi dari kantor pusat.</p>
+
+                <p><strong>Kami menambahkan nilai kepada klien kami dengan:</strong></p>
+                <ul>
+                    <li>Aplikasi yang bisa disesuaikan dengan kebutuhan klien.</li>
+                    <li>Penempatan tim implementasi yang berpengalaman.</li>
+                    <li>Penggunaan software yang berbasis opensource, sehingga menekan biaya operasional.</li>
+                </ul>
+            </div>
+
+            <!-- FOTO CLIENT -->
+            <div class="client-image">
+                <img src="../assets/img/trade03-1428x1000.jpg" alt="Client Focused">
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Vision Mission Section -->
+    <section class="vision-mission">
+        <div class="vision-mission-container">
+            <div class="vm-box">
+                <h2>Visi</h2>
+                <p>Menjadi Perusahaan yang berkompeten, professional, berkualitas dan dipercaya dalam pengembangan, dan
+                    pelatihan tehnologi informasi, internet, komunikasi di berbagai wilayah di Indonesia</p>
+            </div>
+            <div class="vm-box">
+                <h2>Misi</h2>
+                <ul>
+                    <li>Mengembangkan Produk IT yang berkualitas dan Kompetitif</li>
+                    <li>Memberikan servis yang optimal kepada Klien</li>
+                    <li>Menawarkan solusi yang konstruktif kepada Klien</li>
+                    <li>Mengembangkan kemitraan yang saling menguntungkan</li>
+                    <li>Mengembangkan inovasi terbaik dan terkini dalam setiap produk</li>
+                    <li>Meningkatkan benefits dan nilai tambah bagi Klien</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Optima Multi Sinergi</h2>
+        <p>Hubungi kami setiap anda membutuhkan dan tim kami siap membantu!</p>
+        <a href="kontak.html" class="cta-button">HUBUNGI KAMI</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <div class="copyright-icon">©</div>
+                <p>Optima Multi Sinergi 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navMenu').classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
